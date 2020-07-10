@@ -15,12 +15,16 @@ tar -xzf mnvm0026-36.04-larm.bin.tgz
 rm mnvm0026-36.04-larm.bin.tgz
 mv Mini\ vMac\ 26 minivmac
 sudo mv ninivmac /usr/bin/
-echo Do you want a fixed size disk or a dynamically expanding disk? Say fixed size for fized size disk or dynamically expanding for dynamically expanding.
+echo Do you want a fixed size disk or a dynamically expanding disk? Say fixed for fized size disk or dynamically for dynamically expanding.
 read type
 echo What disksize do you want (In Megabytes)?
 read disksize
 echo What is the name of the disk you want?
 read name
 echo Creating a $type $disksize MB hard disk named $name.
-dd if=/dev/zero of=$name bs=1M count=$disksize
-
+while $type=dynamically; do
+   dd if=/dev/zero of=$name bs=1M count=$disksize
+done 
+while $type=fixed; do
+   dd if=/dev/zero of=$name bs=1M seek=$disksize count=0
+done
