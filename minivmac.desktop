@@ -5,4 +5,4 @@ Type=Application
 Terminal=false
 Exec=/usr/bin/minivmac
 Name=Mini vMac
-Icon=
+Icon=/usr/share/minivmac/B82DD72C-DC65-4673-8298-D59081DBBAF0.png
