@@ -22,9 +22,9 @@ read disksize
 echo What is the name of the disk you want?
 read name
 echo Creating a $type $disksize MB hard disk named $name.
-while $type=dynamically; do
+while $type=fixed; do
    dd if=/dev/zero of=$name bs=1M count=$disksize
 done 
-while $type=fixed; do
+while $type=dynamically; do
    dd if=/dev/zero of=$name bs=1M seek=$disksize count=0
 done
