@@ -5,6 +5,8 @@ wget https://winworldpc.com/download/c3902122-6c25-c382-11c3-a6e280947e52/from/c
 p7zip -d c39ac2af-c381-c2bf-1b25-11c3a4e284a2
 # Cleaning up part 1
 rm c39ac2af-c381-c2bf-1b25-11c3a4e284a2
+wget https://raw.githubusercontent.com/macmade/Macintosh-ROMs/master/Mac-Plus.ROM
+mv Mac-Plus.ROM vMac.ROM
 wget https://raw.githubusercontent.com/winexe0/minivmac-on-a-raspberry-pi/master/B82DD72C-DC65-4673-8298-D59081DBBAF0.png
 sudo mv -p B82DD72C-DC65-4673-8298-D59081DBBAF0.png /usr/share/minivmac/
 wget https://raw.githubusercontent.com/winexe0/minivmac-on-a-raspberry-pi/master/minivmac.desktop
